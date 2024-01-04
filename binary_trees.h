@@ -1,30 +1,41 @@
+#ifndef BINARY_TREES_H
 #define BINARY_TREES_H
-#ifdef BINARY_TREES_H
-/*binary_trees.h*/
+
+/* binary_trees.h */
 #include <stdio.h>
 #include <stdlib.h>
-/*Betty doc*/
 
-/*prototypes of all functions  */
+/* Data structure for binary tree node */
+typedef struct binary_tree_s
+{
+    int n;
+    struct binary_tree_s *parent;
+    struct binary_tree_s *left;
+    struct binary_tree_s *right;
+} binary_tree_t;
 
-/*0*/binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
-/*1*/binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
-/*2*/binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
-/*3*/void binary_tree_delete(binary_tree_t *tree);
-/*4*/int binary_tree_is_leaf(const binary_tree_t *node);
-/*5*/int binary_tree_is_root(const binary_tree_t *node);
-/*6*/void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int));
-/*7*/void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int));
-/*8*/void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int));
-/*9*/size_t binary_tree_height(const binary_tree_t *tree);
-/*10*/size_t binary_tree_depth(const binary_tree_t *tree);
-/*11*/size_t binary_tree_size(const binary_tree_t *tree);
-/*12*/size_t binary_tree_leaves(const binary_tree_t *tree);
-/*13*/size_t binary_tree_nodes(const binary_tree_t *tree);
-/*14*/int binary_tree_balance(const binary_tree_t *tree);
-/*15*/int binary_tree_is_full(const binary_tree_t *tree);
-/*16*/int binary_tree_is_perfect(const binary_tree_t *tree);
-/*17*/binary_tree_t *binary_tree_sibling(binary_tree_t *node);
-/*18*/binary_tree_t *binary_tree_uncle(binary_tree_t *node);
+/* Prototypes of all functions */
+binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
+binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
+binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
+void binary_tree_delete(binary_tree_t *tree);
+int binary_tree_is_leaf(const binary_tree_t *node);
+int binary_tree_is_root(const binary_tree_t *node);
+void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int));
+void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int));
+void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int));
+size_t binary_tree_height(const binary_tree_t *tree);
+size_t binary_tree_depth(const binary_tree_t *tree);
+size_t binary_tree_size(const binary_tree_t *tree);
+size_t binary_tree_leaves(const binary_tree_t *tree);
+size_t binary_tree_nodes(const binary_tree_t *tree);
+int binary_tree_balance(const binary_tree_t *tree);
+int binary_tree_is_full(const binary_tree_t *tree);
+int binary_tree_is_perfect(const binary_tree_t *tree);
+void binary_tree_print(const binary_tree_t *tree);
+binary_tree_t *binary_tree_sibling(binary_tree_t *node);
+binary_tree_t *binary_tree_uncle(binary_tree_t *node);
+void binary_tree_print_recursive(const binary_tree_t *tree, size_t depth, int side);
 
-#endif
+#endif /* BINARY_TREES_H */
+
