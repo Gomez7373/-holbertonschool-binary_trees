@@ -1,8 +1,8 @@
-#define
-#ifdef
-
+#define BINARY_TREES_H
+#ifdef BINARY_TREES_H
+/*binary_trees.h*/
 #include <stdio.h>
-
+#include <stdlib.h>
 /*Betty doc*/
 
 /*prototypes of all functions  */
