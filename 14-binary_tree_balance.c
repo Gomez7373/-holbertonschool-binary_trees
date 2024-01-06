@@ -8,7 +8,6 @@ int helper(const binary_tree_t *tree);
  */
 int binary_tree_balance(const binary_tree_t *tree)
 {
-	int balance = 0;
 	int left_size = 0;
 	int right_size = 0;
 
@@ -16,10 +15,9 @@ int binary_tree_balance(const binary_tree_t *tree)
 	{
 		left_size = helper(tree->left);
 		right_size = helper(tree->right);
-		balance += left_size - right_size;
 	}
 
-	return (balance);
+	return (left_size - right_size);
 }
 
 /**
