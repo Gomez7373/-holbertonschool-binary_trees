@@ -37,7 +37,6 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 void binary_tree_print_recursive(const binary_tree_t *tree, size_t depth, int side);
 size_t h_val(size_t num1, size_t num2);
-int helper(const binary_tree_t *tree);
 
 #endif /* BINARY_TREES_H */
 

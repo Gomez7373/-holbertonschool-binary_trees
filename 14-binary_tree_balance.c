@@ -1,5 +1,5 @@
 #include "binary_trees.h"
-
+int helper(const binary_tree_t *tree);
 /**
  * binary_tree_balance - measures the balance factor of a binary tree
  * @tree: targeted tree
