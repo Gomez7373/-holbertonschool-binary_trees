@@ -18,7 +18,7 @@ int helper(const binary_tree_t *tree)
 	return (1 + (left > right ? left : right));
 }
 
- /**
+/**
  * binary_tree_balance - measures the balance factor of a binary tree
  * @tree: targeted tree
  *
