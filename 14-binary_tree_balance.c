@@ -1,5 +1,4 @@
 #include "binary_trees.h"
-#include "11-binary_tree_size.c"
 
 /**
  * helper - get the height of a sub tree
@@ -7,16 +6,7 @@
  *
  * Return: height of subtree, 0 otherwise
  */
-int helper(const binary_tree_t *tree)
-{
-	if (tree == NULL)
-		return (0);
-
-	int left = helper(tree->left);
-	int right = helper(tree->right);
-
-	return (1 + (left > right ? left : right));
-}
+int helper(const binary_tree_t *tree);
 
 /**
  * binary_tree_balance - measures the balance factor of a binary tree
@@ -38,4 +28,21 @@ int binary_tree_balance(const binary_tree_t *tree)
 	}
 
 	return (balance);
+}
+
+/**
+ * helper - get the height of a sub tree
+ * @tree: subtree to check
+ *
+ * Return: height of subtree, 0 otherwise
+ */
+int helper(const binary_tree_t *tree)
+{
+	if (tree == NULL)
+		return (0);
+
+	int left = helper(tree->left);
+	int right = helper(tree->right);
+
+	return (1 + (left > right ? left : right));
 }
