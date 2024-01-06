@@ -1,14 +1,6 @@
 #include "binary_trees.h"
 
 /**
- * helper - get the height of a sub tree
- * @tree: subtree to check
- *
- * Return: height of subtree, 0 otherwise
- */
-int helper(const binary_tree_t *tree);
-
-/**
  * binary_tree_balance - measures the balance factor of a binary tree
  * @tree: targeted tree
  *
